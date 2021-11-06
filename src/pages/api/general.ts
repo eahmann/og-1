@@ -20,11 +20,13 @@ export default withOGImage<keyof typeof QueryEnum>({
       templateTitle,
       logoWidth,
       logoHeight,
-    }) => {
+    }): Promise<string> => {
       const query = {
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
-        logo: logo ?? 'https://og.thcl.dev/images/logo.jpg',
+        logo:
+          logo ??
+          'https://res.cloudinary.com/dkznztisc/image/upload/v1635865106/AWD_branding_lighter_Logo_light_b64b3316f1.svg',
         theme: theme ?? 'dark',
         templateTitle,
         logoWidth: logoWidth ?? '100',
