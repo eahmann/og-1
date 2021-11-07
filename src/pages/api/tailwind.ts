@@ -34,14 +34,26 @@ export default withOGImage<keyof typeof QueryEnum>({
       };
 
       return `
-      <html>
-        <head>
-          <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-        </head>
-        <body>
-          <h1 class="flex flex-row text-6xl text-blue-300">${query.templateTitle}<span>💻</span></h1>
-        </body>
-      </html>
+      <body>
+      <div class="h-screen w-screen bg-gray-800 flex flex-col">
+        <div class="flex flex-row border-b-2 border-gray-500 justify-center p-6">
+          <div class="w-1/3 mr-8">
+            <img src="${query.logo}" alt="Favicon" />
+          </div>
+        </div>
+        <div class="flex flex-col flex-grow">
+              <div class="flex flex-row bg-gray-700 justify-center">
+          <h1 class="align-middle block text-6xl text-white p-6">${query.templateTitle}</h1>
+        </div>
+          <div class="flex flex-row bg-gray-700 flex-grow justify-center text-center">
+            <h2 class="align-middle block text-4xl text-white p-6 mx-12">${query.description}</h2>
+          </div>
+        </div>
+        <div class="flex flex-row bg-gray-700 justify-end">
+          <h1 class="align-middle text-xl text-white p-9">©️ 2021 Atomic Web Development</h1>
+        </div>
+      </div>
+    </body>
       `;
     },
   },
