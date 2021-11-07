@@ -34,6 +34,10 @@ export default withOGImage<keyof typeof QueryEnum>({
       };
 
       return `
+      <html>
+      <head>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+      </head>
       <body>
       <div class="h-screen w-screen bg-gray-800 flex flex-col">
         <div class="flex flex-row border-b-2 border-gray-500 justify-center p-6">
@@ -54,6 +58,8 @@ export default withOGImage<keyof typeof QueryEnum>({
         </div>
       </div>
     </body>
+    </html>
+      
       `;
     },
   },
