@@ -47,14 +47,14 @@ export default withOGImage<keyof typeof QueryEnum>({
         </div>
         <div class="flex flex-col flex-grow">
               <div class="flex flex-row bg-gray-700 justify-center">
-          <h1 class="align-middle block text-6xl text-white p-6">${query.templateTitle}</h1>
+          <h1 class="text-6xl text-white p-6">${query.templateTitle}</h1>
         </div>
           <div class="flex flex-row bg-gray-700 flex-grow justify-center text-center">
-            <h2 class="align-middle block text-4xl text-white p-6 mx-12">${query.description}</h2>
+            <h2 class="text-4xl text-white p-6 mx-12">${query.description}</h2>
           </div>
         </div>
         <div class="flex flex-row bg-gray-700 justify-end">
-          <h1 class="align-middle text-xl text-white p-4"><span>©️</span> 2021 Atomic Web Development</h1>
+          <span class="text-xl text-white p-4"><span class="text-white">©️</span> 2021 Atomic Web Development</span>
         </div>
       </div>
     </body>
