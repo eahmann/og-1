@@ -54,7 +54,7 @@ export default withOGImage<keyof typeof QueryEnum>({
           </div>
         </div>
         <div class="flex flex-row bg-gray-700 justify-end">
-          <span class="text-xl text-white p-4"><span class="text-white">©️</span> 2021 Atomic Web Development</span>
+          <span class="text-xl text-white p-4"><span>©️</span> 2021 Atomic Web Development</span>
         </div>
       </div>
     </body>
