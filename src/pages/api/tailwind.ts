@@ -49,8 +49,8 @@ export default withOGImage<keyof typeof QueryEnum>({
         <div class="flex flex-col flex-grow bg-gray-700">
           <div class="grid grid-cols-2 h-full">
             <div class="flex flex-col p-6">
-              <div class="flex-grow"><span class="text-4xl text-white leading-normal">${marked(
-                query.description
+              <div class="flex-grow"><span class="text-4xl text-white leading-normal">${marked.marked(
+                query.description.toString()
               )}</span></div>
               <div class="flex flex-col">
                 <span class="text-5xl">${query.templateTitle}</span>
