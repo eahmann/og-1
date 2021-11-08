@@ -1,4 +1,3 @@
-import marked from 'marked';
 import { withOGImage } from 'next-api-og-image';
 
 enum QueryEnum {
@@ -49,9 +48,7 @@ export default withOGImage<keyof typeof QueryEnum>({
         <div class="flex flex-col flex-grow bg-gray-700">
           <div class="grid grid-cols-2 h-full">
             <div class="flex flex-col p-6">
-              <div class="flex-grow"><span class="text-4xl text-white leading-normal">${marked.marked(
-                query.description.toString()
-              )}</span></div>
+              <div class="flex-grow"><span class="text-4xl text-white leading-normal">${query.description}</span></div>
               <div class="flex flex-col">
                 <span class="text-5xl">${query.templateTitle}</span>
                 <span class="text-xl text-[#bf561d]"><span>&#169;&nbsp;</span>2021 Atomic Web Development</span>
