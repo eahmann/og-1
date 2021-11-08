@@ -51,7 +51,7 @@ export default withOGImage<keyof typeof QueryEnum>({
               <div class="flex-grow"><span class="text-4xl text-white leading-normal">${query.description}</span></div>
               <div class="flex flex-col">
                 <span class="text-5xl">${query.templateTitle}</span>
-                <span class="text-xl text-gray-900"><span>&#169;&nbsp;</span>2021 Atomic Web Development</span>
+                <span class="text-xl text-gray-900 mt-6"><span>&#169;&nbsp;</span>2021 Atomic Web Development</span>
               </div>
               </div class="mx-auto">
               <img class="p-6 h-96 mx-auto" src="https://res.cloudinary.com/dkznztisc/image/upload/v1635957873/Illustration_411506defd.svg" alt="Favicon" />
