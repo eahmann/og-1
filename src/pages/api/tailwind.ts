@@ -1,3 +1,4 @@
+import marked from 'marked';
 import { withOGImage } from 'next-api-og-image';
 
 enum QueryEnum {
@@ -39,22 +40,25 @@ export default withOGImage<keyof typeof QueryEnum>({
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
       </head>
       <body>
-      <div class="h-screen w-screen bg-gray-800 flex flex-col">
+      <div class="h-screen w-screen bg-gray-800 flex flex-col text-white">
         <div class="flex flex-row border-b-2 border-gray-500 justify-center p-6">
           <div class="w-1/3 mr-8">
-            <img src="${query.logo}" alt="Favicon" />
+            <img src="https://res.cloudinary.com/dkznztisc/image/upload/v1635865106/AWD_branding_lighter_Logo_light_b64b3316f1.svg" alt="Favicon" />
           </div>
         </div>
-        <div class="flex flex-col flex-grow">
-              <div class="flex flex-row bg-gray-700 justify-center">
-          <h1 class="text-6xl text-white p-6">${query.templateTitle}</h1>
-        </div>
-          <div class="flex flex-row bg-gray-700 flex-grow justify-center text-center">
-            <h2 class="text-4xl text-white p-6 mx-12">${query.description}</h2>
+        <div class="flex flex-col flex-grow bg-gray-700">
+          <div class="grid grid-cols-2 h-full">
+            <div class="flex flex-col p-6">
+              <div class="flex-grow"><span class="text-4xl text-white leading-normal">${marked(
+                query.description
+              )}</span></div>
+              <div class="flex flex-col">
+                <span class="text-5xl">${query.templateTitle}</span>
+                <span class="text-xl text-[#bf561d]"><span>&#169;&nbsp;</span>2021 Atomic Web Development</span>
+              </div>
+            </div>
+            <div class="p-6"><img class="" src="https://res.cloudinary.com/dkznztisc/image/upload/v1635957873/Illustration_411506defd.svg" alt="Favicon" /></div>
           </div>
-        </div>
-        <div class="flex flex-row bg-gray-700 justify-end">
-        <span class="flex flex-row text-xl text-white p-4"><span class="text-white">&#169;&nbsp;</span> 2021 Atomic Web Development</span>
         </div>
       </div>
     </body>
