@@ -54,7 +54,6 @@ export default withOGImage<keyof typeof QueryEnum>({
                 <span class="text-xl text-[#bf561d]"><span>&#169;&nbsp;</span>2021 Atomic Web Development</span>
               </div>
             </div>
-            <div class="p-6"><img class="max-h-[300px]" src="https://res.cloudinary.com/dkznztisc/image/upload/v1635957873/Illustration_411506defd.svg" alt="Favicon" /></div>
           </div>
         </div>
       </div>
